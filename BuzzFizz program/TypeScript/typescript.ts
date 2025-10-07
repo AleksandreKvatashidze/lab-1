@@ -1,17 +1,14 @@
 import * as readline from 'readline';
 
-// Utility: Create readline interface
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-// Utility: Ask a question and return a Promise<string>
 function askQuestion(query: string): Promise<string> {
     return new Promise(resolve => rl.question(query, resolve));
 }
 
-// Utility: Prime check
 function isPrime(n: number): boolean {
     if (n < 2) return false;
     for (let i = 2; i <= Math.sqrt(n); i++) {
@@ -77,10 +74,8 @@ async function main() {
         }
     }
 
-    // Output the sequence
     console.log("\n" + output.join(" "));
 
-    // Print stats
     console.log(`\nCountPrimes = ${countPrimes}`);
     console.log(`SumEven = ${sumEven}`);
     console.log(`MaxOdd = ${maxOdd}`);
@@ -91,6 +86,5 @@ async function main() {
     rl.close();
 }
 
-// Run the program
 main();
 
