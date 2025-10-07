@@ -36,7 +36,7 @@ class Program
         }
         Console.WriteLine("Too many invalid attempts. Exiting.");
         Environment.Exit(0);
-        return -1; // Won't reach here
+        return -1;
     }
 
     static void Main()
@@ -91,11 +91,7 @@ class Program
                 sumDivBy7 += i;
             }
         }
-
-        // Output result
         Console.WriteLine(string.Join(" ", output));
-
-        // Summary
         Console.WriteLine($"\nCountPrimes = {countPrimes}");
         Console.WriteLine($"SumEven = {sumEven}");
         Console.WriteLine($"MaxOdd = {maxOdd}");
