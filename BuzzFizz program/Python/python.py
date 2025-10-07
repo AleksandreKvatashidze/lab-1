@@ -52,10 +52,7 @@ def main():
         if i % 7 == 0:
             sum_div_by_7 += i
 
-    # Print the final output line
     print(" ".join(output))
-
-    # Print summary
     print(f"\nCountPrimes = {count_primes}")
     print(f"SumEven = {sum_even}")
     print(f"MaxOdd = {max_odd}")
